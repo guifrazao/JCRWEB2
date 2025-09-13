@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <br/>
+    <form action="/tarefas" method="POST">
+        <input name="titulo" id="tituloTarefa" type="text" placeholder="Título"><br/>
+        <label for="feita">Feita</label>
+        <input name="feito" id="feita" type="radio" checked="true" value="true"><br/>
+        <label for="naoFeita">Não Feita</label>
+        <input name="feito" id="naoFeita" type="radio" value="false"><br/>
+        <button type="submit">Criar Tarefa</button>
+    </form>
+    <br/>
+    <form action="/tarefas?_method=PUT" method="POST">
+        <input name="id" id="idTarefa" type="number" placeholder="ID"><br/>
+        <input name="titulo" id="tituloTarefa" type="text" placeholder="Título"><br/>
+        <label for="feita">Feita</label>
+        <input name="feito" id="feita" type="radio" checked="true" value="true"><br/>
+        <label for="naoFeita">Não Feita</label>
+        <input name="feito" id="naoFeita" type="radio" value="false"><br/>
+        <button type="submit">Atualizar Tarefa</button>
+    </form>
+    <br/>
+    <form action="/tarefas?_method=DELETE" method="POST">
+        <input name="id" id="idTarefa" type="number" placeholder="ID"><br/>
+        <button type="submit">Remover Tarefa</button>
+    </form>
+    <br/>
+    <form action="/tarefas" method="GET">
+        <button type="submit">Listar Todas as Tarefas</button>
+    </form>
+    <br/>
+    <form action="/tarefasFeitas" method="GET">
+        <button type="submit">Listar Todas as Tarefas Feitas</button>
+    </form>
+    <br/>
+    <form action="/tarefasNaoFeitas" method="GET">
+        <button type="submit">Listar Todas as Tarefas Não Feitas</button>
+    </form>
+    <br/>
+</body>
+</html>
